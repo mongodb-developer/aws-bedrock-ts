@@ -6,12 +6,11 @@ This project demonstrates how to build a TypeScript application that interacts w
 
 ```
 bedrock-ts-agent/
-├── backend/
-│   ├── src/
+├── src/
 │   │   └── app.ts
 │   ├── package.json
 │   └── tsconfig.json
-├── frontend/
+├── aws-conference-assistant/
 │   ├── src/
 │   │   ├── App.vue
 │   │   ├── main.ts
