@@ -24,8 +24,8 @@ const bedrockAgentRuntime = new BedrockAgentRuntimeClient({
   },
 });
 
-const AGENT_ID = "NX59ZEXWX3";
-const AGENT_ALIAS_ID = "SVNMJTQ8PT";
+const AGENT_ID = process.env.AGENT_ID;
+const AGENT_ALIAS_ID = process.env.AGENT_ALIAS_ID;
 
 
 async function invokeBedrockAgent(prompt: string, sessionId: string): Promise<{ sessionId: string; completion: string }> {
@@ -43,6 +43,8 @@ async function invokeBedrockAgent(prompt: string, sessionId: string): Promise<{ 
     if (response.completion === undefined) {
       throw new Error("Completion is undefined");
     }
+
+    console.log("Response:", response);
 
     for await (let chunkEvent of response.completion) {
       const chunk = chunkEvent.chunk;
@@ -69,6 +71,7 @@ app.post('/chat', cors(corsOptions), async (req, res) => {
     }
 
     const response = await invokeBedrockAgent(message, sessionId);
+    
     res.json(response);
   } catch (error) {
     console.error('Error:', error);
