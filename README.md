@@ -37,7 +37,7 @@ Before setting up the application, you need to configure AWS Bedrock. For full g
 2. Navigate to the AWS Bedrock console.
 3. Enable the following models:
    - Amazon Titan Text Embedding model (amazon.titan-embed-text-v2:0)
-   - Claude 3 Sonnet Model
+   - Claude 3/3.5 Sonnet Model
 4. Create a Knowledge Base:
    - Upload your data to an S3 bucket (e.g., AWS Summit agenda data).
    - In the Bedrock console, go to the Knowledge Base section.
@@ -45,12 +45,12 @@ Before setting up the application, you need to configure AWS Bedrock. For full g
    - Choose MongoDB Atlas as the Vector Database and configure the connection.
 5. Create a Bedrock Agent:
    - Go to the Agents section in the Bedrock console.
-   - Create a new agent, selecting the Claude 3 Sonnet model.
+   - Create a new agent, selecting the Claude 3.5 Sonnet model.
    - Add your Knowledge Base to the agent.
    - Set up a YouTube search action group (optional):
      - Create a new action group in your agent.
      - Set up a Lambda function for YouTube search (see project documentation for details).
-6. Note down the Agent ID and Agent Alias ID for use in the application.
+6. Note down the Agent ID and Agent Alias ID for use in the application after you saved and prepared the agent.
 
 For detailed instructions on setting up AWS Bedrock, refer to the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html).
 
