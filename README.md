@@ -5,7 +5,7 @@ This project demonstrates how to build a TypeScript application that interacts w
 ## Project Structure
 
 ```
-bedrock-ts-agent/
+aws-bedrock-ts/
 ├── src/
 │   │   └── app.ts
 │   ├── package.json
@@ -57,7 +57,7 @@ For detailed instructions on setting up AWS Bedrock, refer to the [AWS Bedrock d
 
 1. Navigate to the backend directory:
    ```
-   cd bedrock-ts-agent/backend
+   cd aws-bedrock-ts
    ```
 
 2. Install dependencies:
@@ -90,7 +90,7 @@ The backend server should now be running on `http://localhost:3000`.
 
 1. Navigate to the frontend directory:
    ```
-   cd bedrock-ts-agent/frontend
+   cd aws-bedrock-ts/aws-conference-assistant
    ```
 
 2. Install dependencies:
